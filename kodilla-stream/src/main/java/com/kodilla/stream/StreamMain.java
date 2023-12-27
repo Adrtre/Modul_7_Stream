@@ -21,7 +21,7 @@ public class StreamMain {
         expressionExecutor.executeExpression(10 , 50 , (a , b ) -> a-b);
         expressionExecutor.executeExpression(10 , 50 , (a , b ) -> a/b);
         expressionExecutor.executeExpression(10 , 50 , (a , b ) -> a*b);
-        System.out.println("------------------");
+        System.out.println("--------Zadanie 7.1 ----------");
         PoemBeautifier beautifier = new PoemBeautifier();
         beautifier.beautify("Adrian", String::toUpperCase);
         System.out.println("------------------");
@@ -37,7 +37,7 @@ public class StreamMain {
         theResultListOfBooks.entrySet().stream()
                 .map(entry -> entry.getKey()+": "+ entry.getValue())
                 .forEach(System.out::println);
-        System.out.println("------------------");
+        System.out.println("-----------Zadanie 7.3-------");
 
         Forum forum = new Forum();
         List<ForumUser> userList = forum.getUserList();
