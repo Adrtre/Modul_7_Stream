@@ -8,6 +8,8 @@ import com.kodilla.stream.forumuser.ForumUser;
 import com.kodilla.stream.lambda.*;
 import com.kodilla.stream.person.People;
 
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -44,7 +46,7 @@ public class StreamMain {
 
         Map<Integer, ForumUser> resultMap = userList.stream()
                 .filter(user -> user.getGender() == 'M')
-                .filter(user -> user.getAge() >= 20)
+                .filter(user -> Period.between(user.getBirthdate(), LocalDate.now()).getYears() >= 18)
                 .filter(user -> user.getPostsCount() > 0)
                 .collect(Collectors.toMap(ForumUser::getUserId, user -> user));
 

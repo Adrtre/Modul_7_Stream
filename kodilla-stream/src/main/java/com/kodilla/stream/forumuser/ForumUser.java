@@ -6,6 +6,7 @@ public class ForumUser {
     private int userId;
     private String username;
     private char gender;
+
     private LocalDate birthdate;
     private int postsCount;
 
@@ -16,28 +17,22 @@ public class ForumUser {
         this.birthdate = birthdate;
         this.postsCount = postsCount;
     }
-
     public int getUserId() {
+
         return userId;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public char getGender() {
-        return gender;
     }
 
     public LocalDate getBirthdate() {
         return birthdate;
     }
 
-    public int getAge() {
-        return LocalDate.now().getYear() - birthdate.getYear();
+    public char getGender() {
+
+        return gender;
     }
 
     public int getPostsCount() {
+
         return postsCount;
     }
 
